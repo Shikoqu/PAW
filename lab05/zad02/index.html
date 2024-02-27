@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+      border: 2px solid red;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img id="photo" src="img/img1.jpg" alt="">
+  <button onclick="changePhoto()">Zmień zdjęcie</button>
+
+  <script>
+
+    var photos = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg"];
+    var colors = ["red", "blue", "yellow"];
+    var currentIndex = 0;
+
+    function changePhoto() {
+      currentIndex = (currentIndex + 1) % photos.length;
+
+      var photoElement = document.getElementById("photo");
+      var color = colors[currentIndex];
+
+      photoElement.src = photos[currentIndex];
+      photoElement.style.border = "2px solid " + color;
+    }
+
+  </script>
+
+</body>
+
+</html>

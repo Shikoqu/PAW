@@ -1,0 +1,26 @@
+#table-container {
+    margin: 20px;
+}
+
+#country-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#country-table th,
+#country-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#pagination-container {
+    margin-top: 10px;
+}
+
+.pagination-button {
+    display: inline-block;
+    padding: 8px;
+    margin: 0 5px;
+    cursor: pointer;
+}

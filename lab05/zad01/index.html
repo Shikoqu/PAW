@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #welcome-section {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="showPrompt()">Wprowadź imię</button>
+  <div id="welcome-section">
+    <h2 id="welcome-message"></h2>
+  </div>
+
+  <script>
+    function showPrompt() {
+      var name = prompt("Proszę wprowadzić imię:");
+      if (name !== null && name.trim() !== "") {
+        displayWelcomeMessage(name);
+      }
+    }
+
+    function displayWelcomeMessage(name) {
+      var welcomeSection = document.getElementById("welcome-section");
+      var welcomeMessage = document.getElementById("welcome-message");
+
+      // Dodaj prefix w zależności od płci (dla uproszczenia przyjmujemy, że płeć zależy od ostatniej litery imienia)
+      var prefix = name.endsWith("a") ? "Pani" : "Pan";
+
+      // Ustaw tekst w sekcji powitania
+      welcomeMessage.textContent = "Witam " + prefix + " " + name;
+      welcomeSection.style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>

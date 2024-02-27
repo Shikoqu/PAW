@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 1</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <div class="container">
+    <div id="score">Score: </div>
+
+    <div id="button1" class="square l">
+      <p>1</p>
+      <div id="button2" class="square m">
+        <p>2</p>
+        <div id="button3" class="square s">
+          <p>3</p>
+        </div>
+      </div>
+    </div>
+
+    <button id="propagationOnOff" onclick="propagationOnOff()">Propagation: ON</button>
+    <button id="reset" onclick="reset()">Reset</button>
+    <button id="propagationDirection" onclick="propagationDirectionChange()">Propagation Top-down</button>
+
+  </div>
+
+  <div id="log-wrapper"><p>------logi------</p></div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>

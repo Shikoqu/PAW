@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.square {
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    /* dodatkowy border, aby oddzielić kwadraty */
+}
+
+.square>p {
+    position: absolute;
+    top: 3px;
+}
+
+.square.l{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+}
+
+.square.m {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.square.s {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.square[disabled] {
+    background-color: grey !important;
+    cursor: not-allowed;
+}
+
+#log-wrapper {
+    margin-top: 20px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

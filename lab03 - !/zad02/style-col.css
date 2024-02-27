@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+
+    height: 98vh;
+}
+
+body>div {
+    height: 100px;
+    width: 100px;
+    margin: 1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    border: 2px solid #53535365;
+    border-radius: 5px;
+}
+
+body>div.full {
+    height: 100%;
+}
+
+body>div.selected {
+    background-color: lightgreen;
+    margin-top: 20px;
+}

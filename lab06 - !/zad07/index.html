@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 7</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="gallery">
+    <img src="imgs/carousel1.jpg" alt="Image 1" class="gallery-image" onclick="openModal('imgs/carousel1.jpg')">
+    <img src="imgs/carousel2.jpg" alt="Image 1" class="gallery-image" onclick="openModal('imgs/carousel2.jpg')">
+    <img src="imgs/carousel3.jpg" alt="Image 1" class="gallery-image" onclick="openModal('imgs/carousel3.jpg')">
+    <img src="imgs/carousel4.jpg" alt="Image 1" class="gallery-image" onclick="openModal('imgs/carousel4.jpg')">
+    <img src="imgs/carousel5.jpg" alt="Image 1" class="gallery-image" onclick="openModal('imgs/carousel5.jpg')">
+  </div>
+
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-image" class="modal-content">
+    <button class="prev" onclick="changeImage(-1)">&#8249;</button>
+    <button class="next" onclick="changeImage(1)">&#8250;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

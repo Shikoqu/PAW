@@ -1,0 +1,27 @@
+#playground {
+    width: 500px;
+    height: 300px;
+    background-color: #eaeaea;
+    margin: 10px;
+    /* fix syntax error here */
+    border: #8a8a8a 1px solid;
+}
+
+#ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#message {
+    position: absolute;
+    display: none;
+    /* initially hide the message */
+    font-size: 18px;
+    font-weight: bold;
+    color: blue;
+}

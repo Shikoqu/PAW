@@ -1,0 +1,55 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.flexbox {
+    display: flex;
+    background-color: black;
+    min-height: 100%;
+}
+
+.sidenav {
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: top;
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+    flex: 5;
+}
+
+.sidenav>a {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+
+.sidenav>a:hover {
+    background-color: rgb(135, 250, 217);
+    border-radius: 5px;
+}
+
+.sidenav>a>img {
+    border: 2px solid darkblue;
+    border-radius: 5px;
+}
+
+.sidebar>a>div {
+    margin: 10px 10px 10px 10px;
+}
+
+@media screen and (max-width: 425px) {
+    .sidenav>a>div {
+        display: none;
+    }
+}

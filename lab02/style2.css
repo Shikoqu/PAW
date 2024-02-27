@@ -1,0 +1,22 @@
+div.box {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div.box div {
+    background-color: rgba(118, 192, 192, 0.5);
+    width: 100px;
+    height: 100px;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 5px 5px 5px;
+    border: 2px solid rgba(50, 50, 50, 0.5);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.box div.selected {
+    margin-left: 50px;
+}

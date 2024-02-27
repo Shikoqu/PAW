@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 3</title>
+</head>
+
+<body>
+
+  <button onclick="addElement()">Dodaj element</button>
+  <button onclick="removeElement()">Usuń element</button>
+  <ul id="myList">
+    <!-- Lista, do której będziemy dodawać i usuwać elementy -->
+  </ul>
+
+  <script>
+    function addElement() {
+      var myList = document.getElementById("myList");
+      var newElement = document.createElement("li");
+
+      // Ustaw tekst nowego elementu na "element [aktualna długość listy]"
+      newElement.textContent = "element " + (myList.children.length + 1);
+
+      // Dodaj nowy element do listy
+      myList.appendChild(newElement);
+    }
+
+    function removeElement() {
+      var myList = document.getElementById("myList");
+
+      // Sprawdź, czy lista ma elementy do usunięcia
+      if (myList.children.length > 0) {
+        // Usuń pierwszy element z listy
+        myList.removeChild(myList.children[0]);
+      }
+    }
+  </script>
+
+</body>
+
+</html>

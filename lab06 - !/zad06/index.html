@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form id="passwordForm" onsubmit="submitForm(event)">
+    <div class="password-input">
+      <input type="password" id="newPassword" placeholder="New password" oninput="checkPasswordStrength(this.value)">
+      <img id="eyeIcon1" src="imgs/eye_not_visible.png" alt="Show password" onclick="togglePasswordVisibility('newPassword', 'eyeIcon1')">
+    </div>
+
+
+    <div class="password-input">
+      <input type="password" id="repeatPassword" placeholder="Repeat password">
+      <img id="eyeIcon2" src="imgs/eye_not_visible.png" alt="Show password" onclick="togglePasswordVisibility('repeatPassword', 'eyeIcon2')">
+    </div>
+
+    <div class="password-strength">
+      <div class="password-strength-item" id="length">
+        <img id="length_check" src="imgs/wrong.png">
+        <span>at least 8 characters</span>
+      </div>
+      <div class="password-strength-item" id="specialChar">
+        <img id="specialChar_check" src="imgs/wrong.png">
+        <span>at least one special character</span>
+      </div>
+      <div class="password-strength-item" id="capitalLetter">
+        <img id="capitalLetter_check" src="imgs/wrong.png">
+        <span>at least one capital letter</span>
+      </div>
+      <div class="password-strength-item" id="digit">
+        <img id="digit_check" src="imgs/wrong.png">
+        <span>at least one digit</span>
+      </div>
+    </div>
+
+    <div class="message" id="errorMessage"></div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
